@@ -1,123 +1,105 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles((theme) => ({
-  fieldsetAlign:{
-    marginTop:'1%',
-    marginBottom:'1%'
-  },
-  root: {
-    maxWidth: 375,
-    marginLeft:50,
-    padding:20,
-    // border:"solid 1px",
-    marginBottom:"2%"
-  },
+const useStyles = makeStyles({
+    fieldsetAlign:{
+        marginTop:'1%',
+        marginBottom:'1%'
+      },
+      legendAlign:{
+        textAlign:"center"
+      },
+      BestServicesHeader:{
+        fontSize:"2vw",
+        letterSpacing: '3px'
+      },
   media: {
-    height: 0,
-    paddingBottom:'50%',
-    paddingTop: '50%', // 16:9
+    height: '30%',
+    width: '40%',
   },
-  BestServicesHeader:{
-    fontSize:"2vw",
-    letterSpacing: '3px'
+  serviceTag:{
+    float:'left',
+    fontSize: '2vw',
+    marginLeft:'45%',
+    marginTop: '-18%',
+    fontFamily: "Calibri",
   },
-  legendAlign:{
-    textAlign:"center"
+  servicesDescription:{
+      float: "left",
+      fontFamily: "Calibri",
+      fontSize:'1.5vw',
+        marginLeft: '45%',
+        marginTop: '-13%'
+  },
+  mediaRight:{
+      float:'right',
+      height: '30%',
+      width: '40%',   
+  },
+  serviceTagRight:{
+    fontFamily: "Calibri",
+    fontSize:'2vw',
+    marginTop:'5%',
+    marginLeft:'10%',
+  },
+  servicesDescriptionRight:{
+    marginLeft:'10%',
+    fontFamily: "Calibri",
+    fontSize:'1.5vw',
+  },
+  BackGroungDesign:{
+    backgroundColor:'#f2f2f2'
   }
-}));
+});
 
-const BestServices = () => {
+export default function BestServices() {
   const classes = useStyles();
 
   return (
     <fieldset className={classes.fieldsetAlign}>
     <legend className={classes.legendAlign}><p className={classes.BestServicesHeader}>Why Use ARCHITEORS</p></legend>
+
+     {/* 1stcard */}
+    <Card className={classes.BackGroungDesign}>
     <div>
-    <Grid
-    container
-    
-    direction="row"
-    justify="center"
-    alignItems="center"
-  >
-    <Card className={classes.root}>
-      <CardHeader 
-        title="Avoid Wait"
-      />
-      <CardMedia
-        className={classes.media}
-        image="https://i.ytimg.com/vi/meoo2kS5sfo/maxresdefault.jpg"
-        title="New building"
-      />
-      
-      <CardContent>
-        <Typography variant="body2" color="textSecondary">
-        We connect you to verified Interior Design and Architectural Construction Firms directly to save time & brokerage.
-        </Typography>
-      </CardContent>
+    <img  className={classes.media} src="https://wallpapershome.com/images/wallpapers/house-3840x2160-mansion-pool-modern-interior-high-tech-yard-4407.jpg" />
+    </div>
+    <div>
+    <p className={classes.serviceTag}>AVOID WAIT</p>
+    <p className={classes.servicesDescription}>We connect you to verified Interior Design and Architectural Construction Firms directly to save time & brokerage.</p>  
+    </div>
     </Card>
-    {/* 2ndcart */}
-    <Card className={classes.root}>
-      <CardHeader 
-        title="Free Posting"
-      />
-      <CardMedia
-        className={classes.media}
-        image="https://i.ytimg.com/vi/meoo2kS5sfo/maxresdefault.jpg"
-        title="New building"
-      />
-      
-      <CardContent>
-        <Typography variant="body2" color="textSecondary">
-        Post your requirements in a hassle-free manner.
-        </Typography>
-      </CardContent>
+    {/* 2nd card */}
+    <Card>
+    <div>
+    <img  className={classes.mediaRight} src="https://besthqwallpapers.com/Uploads/23-3-2018/45347/thumb2-4k-living-room-fireplace-stained-glass-window-stylish-interior.jpg" />
+    </div>
+    <div>
+    <p className={classes.serviceTagRight}>FREE POSTING</p>
+    <p className={classes.servicesDescriptionRight}>Post your requirements in a hassle-free manner.</p>  
+    </div>
     </Card>
-    
-    {/* 3rdcard */}
-    <Card className={classes.root}>
-      <CardHeader 
-        title="Verified Posts"
-      />
-      <CardMedia
-        className={classes.media}
-        image="https://nimvo.com/wp-content/uploads/2019/10/Modern-Kitchen.jpg"
-        title="New building"
-      />
-      
-      <CardContent>
-        <Typography variant="body2" color="textSecondary">
-        We publish verified posts after receiving the relevant permissions from the Property Owner.
-        </Typography>
-      </CardContent>
+    {/* 3rd card */}
+    <Card className={classes.BackGroungDesign}>
+    <div>
+    <img  className={classes.media} src="https://i.pinimg.com/originals/25/aa/99/25aa990a00c6fc659f7548d644c1e7ed.png" />
+    </div>
+    <div>
+    <p className={classes.serviceTag}>VERIFIED POSTS</p>
+    <p className={classes.servicesDescription}>We publish verified posts after receiving the relevant permissions from the Property Owner.</p>  
+    </div>
     </Card>
-    {/* 4th card */}
-    <Card className={classes.root}>
-      <CardHeader
-       title="Location Based Leads"         
-       />
-      <CardMedia
-        className={classes.media}
-        image="https://nimvo.com/wp-content/uploads/2019/10/Modern-Kitchen.jpg"
-        title="New building"
-      />
-      
-      <CardContent>
-        <Typography variant="body2" color="textSecondary">
-        Purchase leads near your location in a quick and simple way.
-        </Typography>
-      </CardContent>
+    {/* 4th Card */}
+    <Card>
+    <div>
+    <img  className={classes.mediaRight} src="https://i.ytimg.com/vi/meoo2kS5sfo/maxresdefault.jpg" />
+    </div>
+    <div>
+    <p className={classes.serviceTagRight}>LOCATION BASED LEADS</p>
+    <p className={classes.servicesDescriptionRight}>Purchase leads near your location in a quick and simple way.</p>  
+    </div>
     </Card>
-  </Grid>
-  </div>
-  </fieldset>
+    </fieldset>
   );
 }
-export default BestServices;

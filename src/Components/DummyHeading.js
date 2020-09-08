@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
 
   middleBox:{
         background: 'none',
-        width: '45vw',
+        width: '80vw',
         height: 'auto',
-        letterSpacing: '3px'
+        letterSpacing: '3px',
+        marginRight:'10%'
   },
   HeadingAlign :{
       // color:'#f5ba13',  
@@ -32,31 +33,34 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Times New Roman, Times, serif",
   },
   TagLine:{
-    letterSpacing: '3px',
-    color: '#fff',
+    letterSpacing: '2px',
+    color: 'blacks',
     textAlign: "center",
     fontFamily: "Calibri",
+    fontSize:'1.5vw',
   },
   blurbText:{
+    marginTop:"10%",
     letterSpacing: '3px',
-    color: '#131313',
-    textAlign: "center",
+    color: 'black',
+    textAlign: "left",
     fontFamily: "Calibri",
+    fontSize:'1.5vw'
   },
   Buttonmargin: {
     margin: theme.spacing(5),
-    width:"50%",
+    width:"45%",
     height: "10%",
-    marginLeft:'20%',
-    backgroundColor:"white"
+    marginLeft:'30%',
+    marginTop:'0',
+    backgroundColor:"white",
+    fontSize:'1.1vw'
   }
 }));
 
 export default function DummyHeading() {
 
   const classes = useStyles();
-
-  
 
   return (
     <Grid
@@ -71,14 +75,18 @@ export default function DummyHeading() {
         <Box className={classes.middle}>
         <Box className={classes.middleBox}>
         <h1 className={classes.HeadingAlign}>ARCHITEORS</h1>
-        <h3 className={classes.TagLine}>India’s Best Lead Site For Interior Design And Architectural Constructions</h3>
+        <h3 className={classes.TagLine}>INDIA'S BEST LEAD SITE FOR INTERIOR DESIGN AND ARCHITECTURAL CONSTRUCTIONS</h3>
         <p className={classes.blurbText}>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         We at ARCHITEORS are trying to improve connective closures between every 
         Property Owner and Interior Design or Architectural Construction companies. 
+        
         Using our new, user-friendly interface, ARCHITEORS helps Property Owners and 
         Interior Design or Architectural Construction service professionals to get in 
-        touch with each other. The companies can buy verified leads from us and increase 
-        their business productivity. Our mission is to bring dreams to reality, hence being
+        touch with each other. 
+        The companies can buy verified leads from us and increase 
+        their business productivity. 
+        Our mission is to bring dreams to reality, hence being
         recognized in the marketplace and serving healthy client relationships by providing 
         a measurable improvement in building assets.
         </p>

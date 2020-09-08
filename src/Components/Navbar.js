@@ -70,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
   // searchBar
   
   search: {
+    marginLeft:"30vw",
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.black, 0.15),
@@ -189,7 +190,6 @@ const Navbar = () =>{
           </Typography>
 
         {/* searchBar */}
-
           <Toolbar>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -207,8 +207,8 @@ const Navbar = () =>{
         </Toolbar>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-           
-            <Button className={classes.ButtonAlign}>Sign Up/Log In</Button>
+          <Button className={classes.ButtonAlign}>Sign Up</Button>
+            <Button className={classes.ButtonAlign}>Log In</Button>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

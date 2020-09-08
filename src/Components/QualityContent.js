@@ -28,8 +28,7 @@ const  QualityContent=() => {
             <span>Project Details</span>
           </dt>
           <ul>
-          <li>Property Owners would use ARCHITEORS to upload details about their projects.
-</li>
+          <li>Property Owners would use ARCHITEORS to upload details about their projects.</li>
           <li>They would answer questions to help categorize their project details and match with the right Interior Designer or Architect professional for the job.</li>
             <li>We verify all details to ensure that it is categorized and matched quickly.</li>
             </ul>

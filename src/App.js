@@ -3,24 +3,17 @@ import React, { Component } from 'react';
 import Footer from './Components/footer';
 import './App.css';
 import BestServices from './Components/BestServices';
-// import DummyHeading from './Components/DummyHeading';
-// import SearchBar from './Components/SearchBar';
-// import DummyHeading1 from './Components/DummyHeading1';
-import QualityContent from './Components/QualityContent';
-import BackGroundImage from './Components/BackGroundImage'
+import BackGroundImage from './Components/BackGroundImage';
+import BackGroundImageQualityContent from './Components/BackGroungImage-QualityContent';
 
 
 class App extends Component{
 render(){
 return (
 <div>
-<BackGroundImage />
-
-  {/* <Navbar /> */}
-  {/* <SearchBar /> */}
-  {/* <DummyHeading /> */}
+  <BackGroundImage />
   <BestServices />
-  <QualityContent />
+  <BackGroundImageQualityContent />
   <Footer />
 </div>
 
