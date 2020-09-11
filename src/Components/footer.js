@@ -1,72 +1,137 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import GTranslateIcon from '@material-ui/icons/GTranslate';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import { Button } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import PaymentIcon from '@material-ui/icons/Payment';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
-      color: 'white',
-      fontFamily: "Times New Roman, Times, serif",
-       },
-    FooterText:{
-        color:"white",
-        fontFamily: "Times New Roman, Times, serif",
+        '& > *': {
+            margin: theme.spacing(1),
+          //   width: '25ch',
+          },
+          display:"flex",
+          flexWrap:"wrap",
+          fontFamily: "Times New Roman, Times, serif",
+          backgroundColor:'#F5F5F7',
+          height:'40vh',
+        },
+    AboutBox:{
+        color:'#1D1D1F',
+        width:'20vw',
+        backgroundColor:'#F5F5F7'
+    },
+    CustomerCareBox:{
+        color:'#1D1D1F',
+        width:'20vw',
+        backgroundColor:'#F5F5F7'
+    },
+    ContactUsBox:{
+        color:'#1D1D1F',
+        width:'20vw',
+        backgroundColor:'#F5F5F7'
+    },
+    NewsletterBox:{
+        color:'#1D1D1F',
+        backgroundColor:'F5F5F7',
+        width:'30vw',
+        marginTop:'3vw',
+        marginLeft:'3vw',
+        // height:'20vh'
+    },
+    socialMediaLinkAlign:{
+        backgroundColor:'#F5F5F7',
+        width:'100%',
+    },
+    headingAlign:{
+        fontSize:'1.8vw',
+        marginLeft:'2vw',
+        marginTop:'3vw'
+    },
+    SubscribeAlign:{
+        fontSize:'1.8vw',
+        float:'left',
+        marginLeft:'1vw'
+    },  
+    subscribemailAlign:{
+        marginLeft:'2%',
+        width:'80%',
+        height:'2em',
+        borderRadius:'5px 5px 5px 5px',
+        fontSize:'1vw',
+        outline:'none',
+        borderWidth: '1px'
+    },
+    submitButtonAlign:{
+        marginLeft:'1%',
+        width:'4vw',
+        marginTop:'-.5%',
+        height:'2.3vw',
+        borderRadius:'5px 5px 5px 5px',
+        backgroundColor:'#F5F5F7',
+        outline:'none',
+        fontSize:'.8vw',
+    },
+    termsConditionalign:{
+        fontSize:'1vw'
     }
-  });
+  }));
 
 const Footer = () => {
     const classes = useStyles();
         return (
-            <div style = {styles.nav}>
-               <div>
-                <h2 className={classes.FooterText}>About us</h2>
-                <p className={classes.FooterText}> Artichect company with a vision to get customer</p>
-               </div>
-               <div>
-                   <h2 className={classes.FooterText}>Customer Care</h2>
-                   <p className={classes.FooterText}> Artichect company with a vision to get customer</p>
-                   </div>
-<div>
-    <h2 className={classes.FooterText}>Contact us</h2>
-    <p className={classes.FooterText}> Artichect company with a vision to get customer</p> 
-    <input type = 'text'></input><Button classes={{
-        root: classes.root,}}>Search</Button>
-</div>
-
-<div>
+            <Box className={classes.root}
+            display="flex">
+            <Box className={classes.AboutBox}>
+                <h3 className={classes.headingAlign}>About Us</h3>
                 <ul>
-                    <li>
-                    <IconButton classes={{
-        root: classes.root,}}>
-
-            <TwitterIcon />
-         </IconButton>
-                    </li>
-                   
-                    <li>
-                       
-                        <IconButton classes={{
-        root: classes.root,}}>
-
-            <FacebookIcon />
-         </IconButton>
-                    
-                    </li>
-                    <li>
-                    <IconButton classes={{
-        root: classes.root,}}>
-
-            <GTranslateIcon />
-         </IconButton>
-                    </li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
                 </ul>
-
-            </div>
-            </div>
+            </Box>
             
+            <Box className={classes.CustomerCareBox}>
+            <h3 className={classes.headingAlign}>Customer Care</h3>
+            <ul sty>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                </ul>
+            </Box>
+            
+            <Box className={classes.ContactUsBox}>
+            <h3 className={classes.headingAlign}>Contact us</h3>
+            <ul>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                </ul>
+            </Box>
+            <Box className={classes.NewsletterBox}>
+                <center>
+                <h3 className={classes.SubscribeAlign}>Search Leads</h3>
+                <input type="email" placeholder="Search For Leads" className={classes.subscribemailAlign}></input>
+                <Button variant="outlined" size="large" className={classes.submitButtonAlign}>
+        SEARCH
+        </Button>
+        </center>
+        <center>
+        <PaymentIcon style={{ fontSize: '2vw'}} />
+        <AccountBalanceIcon style={{ fontSize: '2vw' }} />
+            </center>
+            </Box>
+            <Box className={classes.socialMediaLinkAlign}>
+                <center><FacebookIcon style={{ fontSize: '2vw' }} /> &nbsp;&nbsp; <InstagramIcon style={{ fontSize: "2vw" }} /></center>
+                <center><p className={classes.termsConditionalign}>Terms and Conditions | Priavcy Policy | Sitemap</p></center>
+            </Box>
+            </Box>
         )
 
 }
@@ -74,7 +139,7 @@ const Footer = () => {
 
 const styles = {
     
-    nav : {
+    li : {
         height : 150,
         background : 'black',
         display : 'flex',
